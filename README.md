@@ -17,7 +17,6 @@ data lake.
 ### Main design
 
 The data lake `sparkifydl` holds information about songs played and relative metadata. The star schema is made of:
-
     - *fact table*: `songplays`
     - *dimension tables*: `songs`, `users`, `time` and `artists`
  
@@ -48,7 +47,7 @@ The data manipulation is performed via PySpark, an interface for Apache Spark in
 1. Query number of songs in a given year
 2. Query the average length of the longest 25 songs played per artist
 
-```
+```python
 from pyspark.sql import SparkSession
 
 spark = SparkSession \
